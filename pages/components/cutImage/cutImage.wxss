@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 22;
+  background: #f8f8f8;
+  color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: all 0.25s ease-in;
+  flex: auto;
+}
+.wrapper.active {
+  transform: translateX(0);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff635c;
+  padding: 40rpx;
+  height: 40rpx
+}
+/* canvas {
+  background: #000;
+   display: flex; 
+  width: 100px;
+  height: 100px;
+  z-index: 333
+} */
+.canvas-wrapper {
+  flex: auto;
+}

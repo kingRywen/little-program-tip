@@ -1,0 +1,17 @@
+<view class='wrapper'>
+  <view class='box'>
+    <block wx:if='{{ success }}'>
+      <icon type='success' size='40' color='#4395ff'></icon>
+      <text class='title'>申请提现成功</text>
+      <text class='tips'>24小时内审核通过将打款至你的微信账户</text>
+      <text class='money'>{{ money }}元</text>
+
+    </block>
+    <block wx:else>
+      <icon type='warn' size='40' color='#ff635c'></icon>
+      <text class='title warn'>申请提现失败</text>
+      <text class='tips'>原因：{{ reason }}</text>
+    </block>
+  </view>
+  
+</view>

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+     <button wx:if="{{!hasUserInfo && canIUse}}" class='myBtnPrimary' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button> 
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.m_HeadUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">打赏给 {{userInfo.m_Name}}</text>
+      <text class="mark">{{ userInfo.m_Remark || '非常感谢你的咖啡。' }}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">选择打赏金额</text>
+    <view class='showBox'>
+      <view wx:for="{{money}}" wx:for-index="idx" wx:for-item="itemName" wx:key='{{idx}}' class='selectBox'>
+        <text data-index='{{idx}}' class='selectBtn {{nowIndex == idx ? "active" : "" }}' bindtap='changeNowIndex'>{{itemName}}元</text>
+      </view>
+      <view class='selectBox'>
+          <input value='{{inputMoneyNum}}' class='selectBtn selectInput {{nowIndex == money.length ? "active" : "" }}' data-index='{{money.length}}' bindtap='inputMoney' type='text' bindblur='addYuan'></input>
+      </view>
+  </view>
+  <view class='userBottom'>
+    <button bindtap='payMoney' disabled='{{ userInfo.status == 2 ? true : false }}' class='myBtnDefault'>确认打赏</button>
+  </view>
+  </view>
+</view>
+

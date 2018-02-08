@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "打赏页设置",
+  "usingComponents": {
+    "edit": "/pages/components/edit/edit"
+  }
+}

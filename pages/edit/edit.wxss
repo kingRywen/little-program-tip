@@ -1,0 +1,17 @@
+page, body {
+  background: #f8f8f8
+}
+
+.input {
+  margin: 30rpx 0;
+  font-size: 16px;
+  background: #ffffff;
+  padding: 20rpx;
+}
+.primary {
+  padding: 2px;
+  font-size: 16px;
+  margin: 100rpx 20rpx;
+  background: #607d8b;
+  color: #fff
+}

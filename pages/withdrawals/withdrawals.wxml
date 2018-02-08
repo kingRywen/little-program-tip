@@ -1,0 +1,9 @@
+<view class='wrapper'>
+  <view class='box'>
+    <text class='title'>提现金额</text>
+    <input class='money' type='digit' value='{{ inputMoney }}' bindinput='change'></input>
+    <text class='tips' wx:if='{{ !big }}'>零钱余额￥{{ money }}</text>
+    <text class='tips warn' wx:else>输入金额超过零钱余额</text>
+    <button class='myBtnDefault' disabled='{{ disabled }}' bindtap='submit'>提现</button>
+  </view>
+</view>

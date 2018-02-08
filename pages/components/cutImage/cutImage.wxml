@@ -1,0 +1,10 @@
+<view class='wrapper {{ show? "active" : "" }}'>
+<view class='header'>
+  <text bindtap='cancel'>取消</text>
+  <text>点击上传</text>
+</view>
+<view class='canvas-wrapper'>
+  <canvas canvas-id="myCanvas" style="z-index:22; width:160px;height:160px;border: 1px solid red"/>
+</view>
+
+</view>

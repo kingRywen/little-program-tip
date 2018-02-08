@@ -1,0 +1,36 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class='myBtnPrimary' bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      
+      <text class="userinfo-nickname">{{userInfo.m_Name}}</text>
+      <text class="mark">{{ userInfo.m_Remark || '非常感谢你的咖啡。' }}</text>
+    </block>
+    
+  </view>
+  <view class='code'>
+    <!--如果没有授权登录，则显示提示  -->
+    <block wx:if="{{ !hasUserInfo && canIUse }}">
+      <text class='tip'>请点击'登录'按钮，进一步使用我们的小程序</text>
+    </block>
+    <block wx:else>
+      <view class='bgImg'>
+        <image src='{{bgImg}}' style='width:200px;height:200px'></image>
+        <image src='{{userInfo.m_HeadUrl}}' mode='aspectFit' mode='aspectFill' style='width:86px;height:86px;border-radius:50%;display:block;z-index:22;position: absolute;'></image>
+        <!-- <block wx:if="!showImg"></block>
+        <block wx:else>
+          <image src='{{userInfo.m_HeadUrl}}' mode='aspectFit' mode='aspectFill' style='width:86px;height:86px;border-radius:50%;display:block;z-index:22;position: absolute;'></image>
+        </block> -->
+      </view>
+    </block>
+      
+      
+      <view class='btn-box'>
+      <button class='myBtnDefault btn' bindtap='getTemp' disabled='{{ notUse }}'>生成我的给赞码</button>
+      </view>
+      
+    </view>
+</view>
+<canvas canvas-id="myCanvas" style="z-index:-1; width:1360px;height:1360px;display:{{showCanvas}};margin-top:200px"/>

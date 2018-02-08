@@ -1,0 +1,4 @@
+<view>
+  <input class='input' value='{{ val }}' bindinput='change'></input>
+  <button class='primary' bindtap='save'>保存</button>
+</view>

@@ -1,0 +1,43 @@
+/* pages/mybag/mybag.wxss */
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.top, .bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center
+}
+.bottom {
+  margin-bottom: 100rpx
+}
+.top .earn {
+  font-size: 14px;
+  color: #999;
+  margin: 20rpx 0
+}
+.top image {
+  margin-top: 80rpx
+}
+.top .money {
+  font-size: 24px
+}
+.bottom {
+  font-size: 14px
+}
+.bottom button {
+  font-size: 16px;
+  width: 100%;
+  margin: 30rpx 0
+}
+navigator.btnSmall {
+  font-size: 14px;
+  color: #ff635c;
+  background: transparent;
+  margin: 30rpx 0
+}

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/code/code",
+    "pages/index/index",
+    "pages/list/list",
+    "pages/client/client",
+    "pages/record/record",
+    "pages/mybag/mybag",
+    "pages/earn/earn",
+    "pages/payresult/payresult",
+    "pages/withdrawals/withdrawals",
+    "pages/withdrawresult/withdrawresult",
+    "pages/edit/edit"
+  ],
+  "tabBar": {
+    "selectedColor": "#ff975c",
+    "list": [{
+      "pagePath": "pages/code/code",
+      "text": "首页",
+      "iconPath": "assets/main.png",
+      "selectedIconPath": "assets/main_press.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "打赏页设置",
+      "iconPath": "assets/setting.png",
+      "selectedIconPath": "assets/setting_press.png"
+    },
+    {
+      "pagePath": "pages/list/list",
+      "text": "我的",
+      "iconPath": "assets/my.png",
+      "selectedIconPath": "assets/my_press.png"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff655c",
+    "navigationBarTitleText": "打赏",
+    "navigationBarTextStyle":"light",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
+ 

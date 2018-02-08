@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class='myBtnPrimary' bindgetuserinfo="getUserInfo"> 登录 </button>
+    <navigator class='nav' url='/pages/index/index' open-type='switchTab' wx:else>
+    <view class='avatar-wrapper'>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.m_HeadUrl}}" wx:if='{{!showImg}}' background-size="cover"></image>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.m_HeadUrl}}" wx:if='{{showImg}}' background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.m_Name}}</text>
+      
+    </view>
+    <view class='avatar-arrow'>
+      <image src='/assets/move.svg' style='width:20px;height:20px;'></image>
+    </view>
+    </navigator>
+    
+    
+  </view>
+  <!-- <view class='content'>
+    <image src='/assets/none.svg' class='none'></image>
+    <text>暂无任何打赏记录</text>
+  </view> -->
+  <view class='list-wrapper'>
+    <navigator url='/pages/mybag/mybag' class='list'>
+      <view class='left'>
+        <image src='/assets/bag.svg' style='width:28px;height:28px;'></image>
+        <text class='text'>我的钱包</text>
+      </view>
+      <image src='/assets/move_black.svg' style='width:20px;height:20px;'></image>
+    </navigator>
+    <navigator url='/pages/record/record' class='list'>
+      <view class='left'>
+        <image src='/assets/record.svg' style='width:28px;height:28px;'></image>
+        <text class='text'>打赏记录</text>
+      </view>
+      <image src='/assets/move_black.svg' style='width:20px;height:20px;'></image>
+    </navigator>
+  </view>
+  
+</view>

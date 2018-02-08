@@ -1,0 +1,61 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #464646;
+} 
+button.myBtnDefault{
+  background: #ff635c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff635c, #ff975c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff635c, #ff975c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 14px;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  line-height: 40px;
+  box-shadow: 0 10px 29px rgba(255, 146, 92, 0.35);
+}
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+  color: #fff;
+  opacity: 0.6;
+}
+button::after {
+  content: none
+}
+.button-hover {
+  color: #ff975c
+}
+
+button.myBtnPrimary {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 60px
+}
+.mark {
+  color: #fff;
+  font-size: 12px;
+  line-height: 3;
+  opacity: 0.6
+}
+.selectBox .selectBtn.selectInput {
+  padding:9px 10px;
+}
+
+ @media screen and (max-width: 375px) {
+  .selectBox .selectBtn.selectInput {
+  padding:6px 10px;
+}
+}
+@media screen and (max-width: 320px) {
+  .selectBox .selectBtn.selectInput {
+  padding:9px 10px;
+}
+} 

@@ -1,0 +1,103 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wxaa34140cb3f1e726",
+	"projectname": "smallProgram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "小程序码",
+					"pathName": "pages/client/client",
+					"query": "uid=EP3571Nv8D",
+					"scene": "1047"
+				},
+				{
+					"id": 1,
+					"name": "主用户入口",
+					"pathName": "pages/code/code",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": 2,
+					"name": "支付结果页",
+					"pathName": "pages/payresult/payresult",
+					"query": "money=1&success=false",
+					"scene": "1001"
+				},
+				{
+					"id": 3,
+					"name": "提现",
+					"pathName": "pages/withdrawals/withdrawals",
+					"query": "money=0.01",
+					"scene": "1001"
+				},
+				{
+					"id": 4,
+					"name": "提现结果",
+					"pathName": "pages/withdrawresult/withdrawresult",
+					"query": "result=fail&money=0.01",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "给赞",
+					"pathName": "pages/record/record",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "收支明细",
+					"pathName": "pages/earn/earn",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "预览",
+					"pathName": "pages/client/client",
+					"query": "prev=1",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "打赏页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": 9,
+					"name": "编辑页",
+					"pathName": "pages/edit/edit",
+					"query": "name=forY&title=设置",
+					"scene": "1001"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,39 @@
+.container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh; 
+  bottom: 0;
+  left: 0;
+  z-index: 22;
+  background: #fff;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: all 0.25s ease-in;
+  background: #f8f8f8
+}
+.container.active {
+  transform: translateY(0);
+  visibility: visible
+}
+
+.input {
+  margin: 30rpx 0;
+  font-size: 16px;
+  background: #ffffff;
+  padding: 20rpx;
+}
+.primary {
+  padding: 2px;
+  font-size: 16px;
+  margin: 30rpx 20rpx;
+  background: #607d8b;
+  color: #fff
+}
+.green {
+  background: #44b549
+}
+.tips {
+  font-size: 12px;
+  color: #999;
+  margin: 0 30rpx
+}

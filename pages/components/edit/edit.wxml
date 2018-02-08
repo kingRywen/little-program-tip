@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container {{ isShow ? 'active' : '' }}">
+  <input class='input' value='{{ val }}' bindinput='change' maxlength='{{length}}'></input>
+  <text class='tips'>不能超过{{length}}个字符</text>
+  <button class='primary green' bindtap='save'>保存</button>
+  <button class='primary' bindtap='cancel'>取消</button>
+</view>

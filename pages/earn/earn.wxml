@@ -1,0 +1,69 @@
+<!--pages/earn/earn.wxml-->
+<view class='wrapper'>
+  <!-- 头部 -->
+  <view class='header'>
+    <view class='header-item'>
+      
+      <view class="section">
+        <picker mode="date" fields="month" value="{{date}}" bindchange="bindDateChange">
+          <view class="picker">
+            <text class='item-title header-first'>{{ year }}年</text>
+            <text class='item-main'>
+              <text class='num'>{{ mouth }}</text>
+              <text class='m'>月</text>
+            </text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='header-item'>
+      <text class='item-title'>收入</text>
+      <text class='item-main'>
+        <text class='num-single'>{{ income }}</text>
+      </text>
+    </view>
+    <view class='header-item'>
+      <text class='item-title'>提现</text>
+      <text class='item-main'>
+        <text class='num-single'>{{ Withdrawals }}</text>
+      </text>
+    </view>
+    <view class='header-item'>
+      <text class='item-title'>余额</text>
+      <text class='item-main'>
+        <text class='num-single'>{{ balance }}</text>
+      </text>
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class='bottom' wx:if="{{ !earnList.length }}">
+      <view class="list-wrapper">
+        <image src='/assets/nodata.svg' class='img'></image>
+        <text>暂无记录</text>
+      </view>
+  </view>
+  <view class='bottom' wx:else>
+    <view class='list' wx:for='{{ earnList }}' wx:for-index='idx' wx:key='{{idx}}'>
+      <view class='left'>
+        <image src='/assets/shou.svg' wx:if='{{ item.Type == "微信收账信息返回" }}'></image>
+        <image src='/assets/tixian.svg' wx:elif='{{ item.Type == "提现" }}'></image>
+        <image wx:else src='/assets/shou.svg'></image>
+        <view class='text'>
+          <text class='time'>{{item.day}}日 - {{item.time}}</text>
+          <text class='from' wx:if='{{ item.Type == "微信收账信息返回" }}'>来自{{ item.Sender }}的打赏</text>
+          <text class='from' wx:elif='{{ item.Type == "提现" }}'>提现 {{ item.Status == "未审核" ? '( 正在处理中 )' : '成功' }}</text>
+          <text class='from' wx:else>{{ item.Type }}</text>
+        </view>
+      </view>
+      
+      <text class='money'>{{ item.Money > 0 ? '+' : ''}}{{ item.formatMoney }}</text>
+    </view>
+    
+    
+  </view>
+
+  
+
+
+</view>

@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" class='myBtnPrimary' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" wx:if="{{showImg}}" src="{{userInfo.m_HeadUrl}}" background-size="cover">
+        <text class='imgText'>点击设置</text>
+      </image>
+      <image bindtap="bindViewTap" class="userinfo-avatar" wx:else="{{!showImg}}" src="{{userInfo.m_HeadUrl}}" background-size="cover">
+        <text class='imgText'>点击设置</text>
+      </image>
+      <view bindtap='setName'>
+        <text class="userinfo-nickname">{{userInfo.m_Name}}</text>
+        <image class='icon' src='/assets/edit.svg'></image>
+      </view>
+      <view bindtap='setRemark'>
+        <text class="mark" bindtap='openInput'>{{ userInfo.m_Remark || '非常感谢你的咖啡。' }}</text>
+        <image class='icon small' src='/assets/edit.svg'></image>
+      </view>
+      
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">设置打赏金额</text>
+    <view class='showBox'>
+      <view wx:for="{{money}}" wx:for-index="idx" wx:for-item="itemName" wx:key='{{idx}}' class='selectBox'>
+        <view class='selectBtn selectInput {{nowIndex == idx ? "active" : "" }}'>
+          <input name='Money{{idx}}' data-index='{{idx}}' type='digit' class='setInput' value='{{itemName}}' bindtap='changeNowIndex' bindinput='setInput'></input>
+          <text class='text'>元</text>
+        </view>
+        
+      </view>
+      
+  </view>
+  <view class='userBottom'>
+    <button class='btnSmall' bindtap='goTo'>预览</button>
+    <button bindtap='save' class='myBtnDefault'>保存设置</button>
+    
+  </view>
+  </view>
+
+<edit is-show="{{ show }}" prop="{{ prop }}" val="{{ val }}" length="{{ len }}" bindsave="saveVal" bindcancel="cancel"></edit>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/mybag/mybag.wxml-->
+<view class='wrapper'>
+  <view class='top'>
+    <image src='/assets/earn.svg' style='width:150px;height:150px'></image>
+    <text class='earn'>钱包余额</text>
+    <text class='money'>￥ {{money}}</text>
+  </view>
+  <view class='bottom'>
+    <text>申请提现后将在24小时内打入您的微信钱包</text>
+    <button class='myBtnDefault' bindtap='go'>提现</button>
+    <navigator url='/pages/earn/earn' class='btnSmall'>收支明细</navigator>
+  </view>
+</view>
